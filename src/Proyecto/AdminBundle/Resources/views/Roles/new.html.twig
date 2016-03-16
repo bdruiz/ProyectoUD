@@ -1,0 +1,33 @@
+{% extends ('layout.html.twig') %}
+
+{% block body -%}
+   {{ parent() }}
+<div class="main container">
+    <div class="row well">
+        <div class="col-md-6">
+            <div class="page-header">
+                <h1>A&ntildeadir un Rol</h1>
+            </div>
+            {{ form_start(form, { 'attr' :{ 'id' : id|default('new-form')} }) }}
+                <div class="form-group">
+                    {{ form_label(form.id) }}
+                    {{ form_widget(form.id, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite id'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.nombre) }}
+                    {{ form_widget(form.nombre, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite nombre'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.role) }}
+                    {{ form_widget(form.role, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite un rol'}}) }}
+                </div>
+
+                <p>{{ form_widget(form.submit, { 'label': 'Agregar Rol', 'attr' : {'class' : 'btn btn-success' }}) }}</p>
+            {{ form_end(form) }}
+            <a href="{{ path('ud_admin_roles') }}" class="btn btn-sm btn-link">
+                Volver
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

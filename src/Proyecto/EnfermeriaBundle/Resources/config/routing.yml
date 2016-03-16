@@ -1,0 +1,64 @@
+enfermeria_homepage:
+    path:     /enfermeria
+    defaults: { _controller: EnfermeriaBundle:Default:prueba }
+
+#seguridadsocial
+
+ud_enfermeria_ssocial:
+    path:    /ud/enfermeria/ssocial
+    defaults: { _controller: EnfermeriaBundle:SeguridadSocial:index }
+
+ud_enfermeria_ssocial_show:
+    path:    /ud/enfermeria/ssocial/show/{id}
+    defaults: { _controller: EnfermeriaBundle:SeguridadSocial:show }
+
+ud_enfermeria_ssocial_new:
+    path:    /ud/enfermeria/ssocial/new
+    defaults: { _controller: EnfermeriaBundle:SeguridadSocial:new }
+
+ud_enfermeria_ssocial_create:
+    path:    /ud/enfermeria/ssocial/create
+    defaults: { _controller: EnfermeriaBundle:SeguridadSocial:create }
+
+ud_enfermeria_ssocial_edit:
+    path:    /ud/enfermeria/ssocial/edit/{id}
+    defaults: { _controller: EnfermeriaBundle:SeguridadSocial:edit }
+
+ud_enfermeria_ssocial_update:
+    path:   /ud/enfermeria/ssocial/update/{id}
+    defaults: { _controller: EnfermeriaBundle:SeguridadSocial:update }
+
+ud_enfermeria_ssocial_delete:
+    path:    /ud/enfermeria/ssocial/delete/{id}
+    defaults: { _controller: EnfermeriaBundle:SeguridadSocial:delete }
+
+#reporte_emergencia
+
+ud_enfermeria_reporte:
+    path:   /ud/enfermeria/reporte
+    defaults: { _controller: EnfermeriaBundle:ReporteEmergencia:index }
+
+ud_enfermeria_reporte_new:
+    path:  /ud/enfermeria/reporte/new
+    defaults: { _controller: EnfermeriaBundle:ReporteEmergencia:new }
+
+ud_enfermeria_reporte_create:
+    path:  /ud/enfermeria/reporte/create
+    defaults: { _controller: EnfermeriaBundle:ReporteEmergencia:create }
+
+ud_enfermeria_reporte_show:
+    path: /ud/enfermeria/reporte/show/{id}
+    defaults: { _controller: EnfermeriaBundle:ReporteEmergencia:show }
+
+#ud_enfermeria_reporte_search:
+    #path: /ud/enfermeria/reporte/search
+    #defaults: { _controller: EnfermeriaBundle:ReporteEmergencia:search }
+    #methods: POST
+    
+ud_enfermeria_reporte_found:
+    path: /ud/enfermeria/reporte/found
+    defaults: { _controller: EnfermeriaBundle:ReporteEmergencia:found }
+
+ud_enfermeria_reporte_find:
+    path: /ud/enfermeria/reporte/find
+    defaults: { _controller: EnfermeriaBundle:ReporteEmergencia:find }

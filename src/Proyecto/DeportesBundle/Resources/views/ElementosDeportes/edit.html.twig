@@ -1,0 +1,36 @@
+{% extends 'layout.html.twig' %}
+
+{% block body -%}
+    <div class="main container">
+        <div class="row well">
+            <div class="col-md-6">
+                <h1>Editar un Elemento</h1>
+                {{ form_start(edit_form, { 'attr' :{ 'id' : id|default('edit-form')} }) }}
+                <div class="form-group">
+                    {{ form_label(edit_form.id) }}
+                    {{ form_widget(edit_form.id, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite id'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(edit_form.nombre) }}
+                    {{ form_widget(edit_form.nombre, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite el nombre'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(edit_form.descripcion) }}
+                    {{ form_widget(edit_form.descripcion, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite detalles'}}) }}
+                </div>
+
+                <p>{{ form_widget(edit_form.submit, { 'label': 'Editar Elemento', 'attr' : {'class' : 'btn btn-success' }}) }}</p>
+                {{ form_end(edit_form) }}
+                <a href="{{ path('ud_deportes_elementos') }}" class="btn btn-sm btn-default">
+                    Volver
+                </a>
+                <p>
+                    {{ form_start(delete_form) }}
+                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                    {{ form_end(delete_form) }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

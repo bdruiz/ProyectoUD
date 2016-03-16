@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>PrestamoDeportes</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Fechaentrega</th>
+                <td>{{ entity.fechaEntrega|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Fechadevolucion</th>
+                <td>{{ entity.fechaDevolucion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('ud_deportes_prestamo') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

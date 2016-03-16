@@ -1,0 +1,96 @@
+{% extends ('layout.html.twig') %}
+
+{% block body -%}
+    {{ parent() }}
+    <div class="container well">
+        <div class="col-lg-9">
+            <h1>Usuario: {{ entity.nombres }} {{ entity.apellidos }}</h1>
+            <br>
+            <dl>
+                <dt>Id</dt>
+                <dd>
+                    {{ entity.id }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Codigo</dt>
+                <dd>
+                    {{ entity.username }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Id de carnet</dt>
+                <dd>
+                    {{ entity.idCarnet }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Nombres</dt>
+                <dd>
+                    {{ entity.nombres }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Apellidos</dt>
+                <dd>
+                    {{ entity.apellidos }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Password</dt>
+                <dd>
+                    {{ entity.password }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Salt</dt>
+                <dd>
+                    {{ entity.salt }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Estado</dt>
+                <dd>
+                    {{ entity.estado }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Foto</dt>
+                <dd>
+                    {{ entity.foto }}
+                    &nbsp;
+                </dd>
+                <br>
+                <dt>Esta activo</dt>
+                <dd>
+                    {% if entity.isActive == 1 %}
+                        <span class ="text-success">Habilitado</span>
+                    {% elseif entity.isActive == 0 %}
+                        <span class="text-warning">Deshabilitado</span>
+                    {% endif %}
+                    &nbsp;
+                </dd>
+
+            </dl>
+        </div>
+        <div class="col-md-3">
+            <h1>Acciones</h1>
+            <p>
+                <a href="{{ path('ud_admin_usuarios') }}" class="btn btn-sm btn-default">
+                    Volver
+                </a>
+            </p>
+
+            <p>
+                <a href="{{ path('ud_admin_usuarios_edit', { 'id': entity.id }) }}" class="btn btn-sm btn-warning">
+                    Editar
+                </a>
+            </p>
+            <p>
+                {{ form_start(delete_form) }}
+                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                {{ form_end(delete_form) }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block body -%}
+    {{ parent() }}
+    <div class="main container">
+        <div class="row well">
+            <div class="col-md-6">
+                <div class="page-header">
+                    <h1>A&ntildeadir un nuevo elemento</h1>
+                </div>
+                {{ form_start(form, { 'attr' :{ 'id' : id|default('new-form')} }) }}
+                <div class="form-group">
+                    {{ form_label(form.id) }}
+                    {{ form_widget(form.id, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite id'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.nombre) }}
+                    {{ form_widget(form.nombre, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite el nombre'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.descripcion) }}
+                    {{ form_widget(form.descripcion, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite detalles'}}) }}
+                </div>
+
+                <p>{{ form_widget(form.submit, { 'label': 'Agregar Elemento', 'attr' : {'class' : 'btn btn-success' }}) }}</p>
+                {{ form_end(form) }}
+                    <ul class="record_actions">
+                        <li>
+                            <a href="{{ path('ud_deportes_elementos') }}">
+                                volver
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

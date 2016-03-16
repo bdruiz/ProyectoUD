@@ -1,0 +1,94 @@
+admin_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AdminBundle:Default:index }
+
+#ROLES
+ud_admin_roles:
+    path: /ud/admin/roles
+    defaults: { _controller: AdminBundle:Roles:index }
+
+ud_admin_roles_show:
+    path: /ud/admin/roles/show/{id}
+    defaults: { _controller: AdminBundle:Roles:show}
+
+ud_admin_roles_edit:
+    path: /ud/admin/roles/edit/{id}
+    defaults: { _controller: AdminBundle:Roles:edit }
+
+ud_admin_roles_update:
+    path: /ud/admin/roles/update/{id}
+    defaults: { _controller: AdminBundle:Roles:update }
+
+ud_admin_roles_new:
+    path: /ud/admin/roles/new
+    defaults: { _controller: AdminBundle:Roles:new }
+
+ud_admin_roles_create:
+    path: /ud/admin/roles/create
+    defaults: { _controller: AdminBundle:Roles:create }
+
+ud_admin_roles_delete:
+    path: /ud/admin/roles/delete/{id}
+    defaults: { _controller: AdminBundle:Roles:delete }
+
+#USUARIOS
+ud_admin_usuarios:
+    path: /ud/admin/usuarios
+    defaults: { _controller: AdminBundle:Usuarios:index }
+
+ud_admin_usuarios_show:
+    path: /ud/admin/usuarios/show/{id}
+    defaults: { _controller: AdminBundle:Usuarios:show}
+
+ud_admin_usuarios_edit:
+    path: /ud/admin/usuarios/edit/{id}
+    defaults: { _controller: AdminBundle:Usuarios:edit }
+
+ud_admin_usuarios_update:
+    path: /ud/admin/usuarios/update/{id}
+    defaults: { _controller: AdminBundle:Usuarios:update }
+
+ud_admin_usuarios_new:
+    path: /ud/admin/usuarios/new
+    defaults: { _controller: AdminBundle:Usuarios:new }
+
+ud_admin_usuarios_create:
+    path: /ud/admin/usuarios/create
+    defaults: { _controller: AdminBundle:Usuarios:create }
+
+ud_admin_usuarios_delete:
+    path: /ud/admin/usuarios/delete/{id}
+    defaults: { _controller: AdminBundle:Usuarios:delete }
+
+ud_admin_usuarios_search:
+    path: /ud/admin/usuarios/search
+    defaults: { _controller: AdminBundle:Usuarios:search }
+
+#DEPENDENCIAS
+ud_admin_dependencia:
+    path: /ud/admin/dependencia
+    defaults: { _controller: AdminBundle:Dependencia:index }
+
+ud_admin_dependencia_show:
+    path: /ud/admin/dependencia/show/{id}
+    defaults: { _controller: AdminBundle:Dependencia:show}
+
+ud_admin_dependencia_edit:
+    path: /ud/admin/dependencia/edit/{id}
+    defaults: { _controller: AdminBundle:Dependencia:edit }
+
+ud_admin_dependencia_update:
+    path: /ud/admin/dependencia/update/{id}
+    defaults: { _controller: AdminBundle:Dependencia:update }
+
+ud_admin_dependencia_new:
+    path: /ud/admin/dependencia/new
+    defaults: { _controller: AdminBundle:Dependencia:new }
+
+ud_admin_dependencia_create:
+    path: /ud/admin/dependencia/create
+    defaults: { _controller: AdminBundle:Dependencia:create }
+
+ud_admin_dependencia_delete:
+    path: /ud/admin/dependencia/delete/{id}
+    defaults: { _controller: AdminBundle:Dependencia:delete }

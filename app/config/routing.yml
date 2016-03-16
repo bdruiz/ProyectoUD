@@ -1,0 +1,37 @@
+deportes:
+    resource: "@DeportesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+enfermeria:
+    resource: "@EnfermeriaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+ud_enfermeria_reporte_search:
+    path: /ud/enfermeria/reporte/search/{id}
+    defaults: { _controller: "EnfermeriaBundle:ReporteEmergencia:search"}
+    options:
+            expose: true
+
+ud_enfermeria_reporte:
+    path: /ud/enfermeria/reporte
+    defaults: { _controller: "EnfermeriaBundle:ReporteEmergencia:index"}
+    options:
+            expose: true
+
+ud_deportes_prestamo_cantidad:
+    path: /ud/deportes/prestamo/cantidad/{id}
+    defaults: { _controller: "DeportesBundle:PrestamoDeportes:cantidad"}
+    options:
+            expose: true
+

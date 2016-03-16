@@ -1,0 +1,81 @@
+deportes_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: DeportesBundle:Default:index }
+
+#elementos
+
+ud_deportes_elementos:
+    path:    /ud/deportes/elementos
+    defaults: { _controller: DeportesBundle:ElementosDeportes:index }
+
+ud_deportes_elementos_show:
+    path:    /ud/deportes/elementos/show/{id}
+    defaults: { _controller: DeportesBundle:ElementosDeportes:show }
+
+ud_deportes_elementos_new:
+    path:    /ud/deportes/elementos/new
+    defaults: { _controller: DeportesBundle:ElementosDeportes:new }
+
+ud_deportes_elementos_create:
+    path:    /ud/deportes/elementos/create
+    defaults: { _controller: DeportesBundle:ElementosDeportes:create }
+
+ud_deportes_elementos_edit:
+    path:    /ud/deportes/elementos/edit/{id}
+    defaults: { _controller: DeportesBundle:ElementosDeportes:edit }
+
+ud_deportes_elementos_update:
+    path:   /ud/deportes/elementos/update/{id}
+    defaults: { _controller: DeportesBundle:ElementosDeportes:update }
+
+ud_deportes_elementos_delete:
+    path:    /ud/deportes/elementos/delete/{id}
+    defaults: { _controller: DeportesBundle:ElementosDeportes:delete }
+
+#inventario
+
+ud_deportes_inventario:
+    path:    /ud/deportes/inventario
+    defaults: { _controller: DeportesBundle:InventarioDeportes:index }
+
+ud_deportes_inventario_show:
+    path:    /ud/deportes/inventario/show/{id}
+    defaults: { _controller: DeportesBundle:InventarioDeportes:show }
+
+ud_deportes_inventario_new:
+    path:    /ud/deportes/inventario/new
+    defaults: { _controller: DeportesBundle:InventarioDeportes:new }
+
+ud_deportes_inventario_create:
+    path:    /ud/deportes/inventario/create
+    defaults: { _controller: DeportesBundle:InventarioDeportes:create }
+
+ud_deportes_inventario_edit:
+    path:    /ud/deportes/inventario/edit/{id}
+    defaults: { _controller: DeportesBundle:InventarioDeportes:edit }
+
+ud_deportes_inventario_update:
+    path:   /ud/deportes/inventario/update/{id}
+    defaults: { _controller: DeportesBundle:InventarioDeportes:update }
+
+ud_deportes_inventario_delete:
+    path:    /ud/deportes/inventario/delete/{id}
+    defaults: { _controller: DeportesBundle:InventarioDeportes:delete }
+
+#Prestamo
+
+ud_deportes_prestamo:
+    path:    /ud/deportes/prestamo
+    defaults: { _controller: DeportesBundle:PrestamoDeportes:index }
+
+ud_deportes_prestamo_show:
+    path:    /ud/deportes/prestamo/show/{id}
+    defaults: { _controller: DeportesBundle:PrestamoDeportes:show }
+
+ud_deportes_prestamo_new:
+    path:   /ud/deportes/prestamo/new
+    defaults: { _controller: DeportesBundle:PrestamoDeportes:new }
+
+ud_deportes_prestamo_create:
+    path:   /ud/deportes/prestamo/create
+    defaults: { _controller: DeportesBundle:PrestamoDeportes:create }

@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+
+{% block body -%}
+    {{ parent() }}
+    <div class="container well">
+        <div class="col-lg-9">
+            <h1>{{ entity.nombre }}</h1>
+            <br>
+            <dl>
+                <dt>Id</dt>
+                <dd>
+                    {{ entity.id }}
+                    &nbsp;
+                </dd>
+                <br>
+
+                <dt>Nombre</dt>
+                <dd>
+                    {{ entity.nombre }}
+                    &nbsp;
+                </dd>
+                <br>
+
+                <dt>Descripcion</dt>
+                <dd>
+                    {{ entity.descripcion }}
+                    &nbsp;
+                </dd>
+                <br>
+
+            </dl>
+        </div>
+            <div class="col-md-3">
+                <h2>Acciones</h2>
+               <p>
+                   <a href="{{ path('ud_deportes_elementos_edit', { 'id': entity.id }) }}" class="btn btn-sm btn-warning">
+                       Editar
+                   </a>
+               </p>
+               <p>
+                    {{ form_start(delete_form) }}
+                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                    {{ form_end(delete_form) }}
+               </p>
+                <p>
+                    <a href="{{ path('ud_deportes_elementos') }}" class="btn btn-sm btn-default">
+                        Volver
+                    </a>
+                    <br>
+                </p>
+            </div>
+    </div>
+{% endblock %}

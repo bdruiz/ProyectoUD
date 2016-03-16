@@ -1,0 +1,21 @@
+{% extends ('layout.html.twig') %}
+
+{% block body -%}
+    <div class="container well">
+        <div class="col-md-9">
+        <h1>Reporte Numero: {{ entity.id }}</h1>
+            <br>
+            <dl>
+                <dt>Id</dt>
+                <dd>{{ entity.id }}</dd>
+            </dl>
+            <dl>
+                <dt>Detalle</dt>
+                <dd>{{ entity.detalle }}</dd>
+            </dl>
+            <a href="{{ path('ud_enfermeria_reporte') }}" class="btn btn-sm btn-default">
+               Volver al listado
+            </a>
+         </div>
+    </div>
+{% endblock %}

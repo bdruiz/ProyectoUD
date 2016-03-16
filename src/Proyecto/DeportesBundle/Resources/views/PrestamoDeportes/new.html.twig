@@ -1,0 +1,40 @@
+{% extends 'layout.html.twig' %}
+
+{% block body -%}
+    {{ parent() }}
+    <div class="main container">
+        <div class="row well">
+            <div class="col-md-6">
+                <div class="page-header">
+                    <h1>Nuevo Prestamo</h1>
+                </div>
+                {{ form_start(form, { 'attr' :{ 'id' : id|default('new-form')} }) }}
+                <div class="form-group">
+                    {{ form_label(form.ideportes) }}
+                    {{ form_widget(form.ideportes, { 'attr' : {'class' : 'form-control'}}) }}
+                </div>
+                <div class="success">
+                    <span class="alert-success">De este elemento existen: </span>
+                </div>
+                <div class="danger">
+                    <span class="alert-danger">No hay existencias</span>
+                </div>
+                <br>
+                <div id="form-rest">
+                    <div class="form-group">
+                        {{ form_label(form.users) }}
+                        {{ form_widget(form.users, { 'attr' : {'class' : 'form-control'}}) }}
+                    </div>
+                    <p>{{ form_widget(form.submit, { 'label': 'Crear Prestamo', 'attr' : {'class' : 'btn btn-success' }}) }}</p>
+                </div>
+                {{ form_end(form) }}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/deportes/js/searchcantidad.js') }}"></script>
+{% endblock %}

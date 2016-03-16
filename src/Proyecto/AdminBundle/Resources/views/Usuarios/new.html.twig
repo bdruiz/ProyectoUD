@@ -1,0 +1,69 @@
+{% extends ('layout.html.twig') %}
+
+{% block body -%}
+     {{ parent() }}
+<div class="main container">
+    <div class="row well">
+        <div class="col-md-6">
+            <div class="page-header">
+                <h1>A&ntildeadir un nuevo usuario</h1>
+            </div>
+            {{ form_start(form, { 'attr' :{ 'id' : id|default('new-form')} }) }}
+                <div class="form-group">
+                    {{ form_label(form.id) }}
+                    {{ form_widget(form.id, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite id'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.username) }}
+                    {{ form_widget(form.username, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite codigo'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.idCarnet) }}
+                    {{ form_widget(form.idCarnet, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite id del carnet'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.nombres) }}
+                    {{ form_widget(form.nombres, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite nombres'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.apellidos) }}
+                    {{ form_widget(form.apellidos, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite apellidos'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.password) }}
+                    {{ form_widget(form.password, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite password'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite email'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.estado) }}
+                    {{ form_widget(form.estado, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite estado'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.foto) }}
+                    {{ form_widget(form.foto) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.isActive) }}
+                    {{ form_widget(form.isActive) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.roles) }}
+                    {{ form_widget(form.roles, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite email'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.dependencia) }}
+                    {{ form_widget(form.dependencia, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite estado'}}) }}
+                </div>
+
+                 <p>{{ form_widget(form.submit, { 'label': 'Agregar Usuario', 'attr' : {'class' : 'btn btn-success' }}) }}</p>
+            {{ form_end(form) }}
+            <a href="{{ path('ud_admin_usuarios') }}" class="btn btn-sm btn-link">
+                Volver
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends ('layout.html.twig') %}
+
+{% block body -%}
+    {{ parent() }}
+    <div class="main container">
+        <div class="row well">
+                <div class="col-md-6">
+                    <div class="page-header">
+                        <h1>Usuarios edit</h1>
+                    </div>
+                    {{ form_start(edit_form, { 'attr' :{ 'id' : id|default('edit-form')} }) }}
+                    <div class="form-group">
+                        {{ form_label(edit_form.id) }}
+                        {{ form_widget(edit_form.id, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite id'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.username) }}
+                        {{ form_widget(edit_form.username, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite codigo'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.idCarnet) }}
+                        {{ form_widget(edit_form.idCarnet, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite id del carnet'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.nombres) }}
+                        {{ form_widget(edit_form.nombres, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite nombres'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.apellidos) }}
+                        {{ form_widget(edit_form.apellidos, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite apellidos'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.password) }}
+                        {{ form_widget(edit_form.password, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite password'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.email) }}
+                        {{ form_widget(edit_form.email, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite email'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.estado) }}
+                        {{ form_widget(edit_form.estado, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite estado'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.foto) }}
+                        {{ form_widget(edit_form.foto) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.isActive) }}
+                        {{ form_widget(edit_form.isActive) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.roles) }}
+                        {{ form_widget(edit_form.roles, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite email'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(edit_form.dependencia) }}
+                        {{ form_widget(edit_form.dependencia, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Digite estado'}}) }}
+                    </div>
+
+                    <p>{{ form_widget(edit_form.submit, { 'label': 'Editar Usuario', 'attr' : {'class' : 'btn btn-success' }}) }}</p>
+                    {{ form_end(edit_form) }}
+
+                    <p>
+                        {{ form_start(delete_form) }}
+                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                        {{ form_end(delete_form) }}
+                    </p>
+                    <p>
+                        <a href="{{ path('ud_admin_usuarios') }}" class="btn btn-sm btn-link">
+                            volver
+                        </a>
+                    </p>
+                </div>
+        </div>
+    </div>
+
+
+{% endblock %}
